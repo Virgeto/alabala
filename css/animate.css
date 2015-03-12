@@ -71,7 +71,8 @@
                 animation-name: bounceIn;
 }
 
-.nav-tile:hover  {
-      -webkit-animation-name: bounceIn;
-                    animation-name: bounceIn;
+.nav-tile:hover
+.nav-cell-text  {
+      -webkit-animation-name: rubberBand;
+                    animation-name: rubberBand;
 }

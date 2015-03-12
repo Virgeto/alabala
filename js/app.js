@@ -8,31 +8,22 @@ $(document).ready(function () {
     //Sticky Navigation
     stickyNavigation();
     menuTog();
-    anim();
+    // anim();
     // scrollings();
     // homePassword(); 
     $(window).click(function(){
            stickyNavigation();
 
     });
+    $(window).bind('scroll', stickyNavigation());
     $(window).on('resize', stickyNavigation());
 });
-
-function anim() {
-    var tile = $('.nav-tile');
-    var cellText = $('.nav-cell-text');
-    
-
-    tile.on('click', function(){
-//        cellText.removeClass('anim');
-        cellText.toggleClass('anime');
-    });
-
-}
 
 function stickyNavigation() {
     var topBar = $('.nav-wrapper');
     var navCell = $('.nav-tile');
+    var article = $('.aside-first-container');
+
     // our function that decides weather the navigation bar should have "fixed" css position or not.
     function sticky_navigation() {
         var scroll_top = document.body.scrollTop; // our current vertical position from the top
@@ -43,6 +34,10 @@ function stickyNavigation() {
         } else {
             topBar.removeClass('scroll-top-bar');
             navCell.removeClass('scroll-nav-tile');
+        }
+        if ($(window).scrollTop() > 450) {
+            article.addClass('fadeInUpBig');
+            
         }
     }
     // run our function on load
