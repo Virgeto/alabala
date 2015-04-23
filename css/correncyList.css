@@ -11,8 +11,9 @@
 }
 
 .currency-list-flag {
-	/*width: 100%;*/
+	border: 1px solid #333;
 	margin-top: 1em;
+	box-shadow: 1px 1px 4px 1px #888;
 }
 
 .currency-list-name {
@@ -34,4 +35,9 @@
 	border-radius: 5px;
 	box-shadow: 0 0 10px 2px #4075E8;
 	background: #fff;
+}
+
+.well-noborder:hover
+.currency-list-flag {
+	box-shadow: none;
 }

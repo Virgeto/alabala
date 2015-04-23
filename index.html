@@ -45,7 +45,7 @@
             This page is under construction
           </p>
           <input type="search" class="header-search center-block form-control" type="search" ng-model="search" placeholder="search  in our academy" ng-focus="focused=true" placeholder="Search currency...">
-          <ul class="search-wrapper" ng-show="focused" ng-if="search.length >= 1" ng-mouseleave="focused=false">
+          <ul class="search-wrapper animated bounceInUp" ng-show="focused" ng-if="search.length >= 1" ng-mouseleave="focused=false">
           <!-- <ul class="search-wrapper col-md-10" ng-show="search.length >= 1"> -->
               <li class="search-item"  ng-repeat="searchItem in currencyList | filter:search | limitTo:10" >
                   <a class="" href="#/single/{{searchItem.name}}" title="{{ searchItem.title }}">
